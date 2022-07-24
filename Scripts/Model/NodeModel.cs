@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class NodeModel
 {
-    public GameObject gameObject;
-    public int xPos;
-    public int yPos;
+    
+    private int cpu;
+    private int ram;
+    private int disk;
 
-    public NodeModel(int x, int y, int z) {
+    public NodeModel(int cpu, int ram, int disk) {
 
-        this.gameObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        this.gameObject.name = "Node" + Configs.cubeCounter++;
-        this.xPos = x;
-        this.yPos = y;
-        
+        this.cpu = cpu;
+        this.ram = ram;
+        this.disk = disk;
+
     }
+    
 }

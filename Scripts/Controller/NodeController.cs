@@ -21,18 +21,18 @@ public class NodeController
 
     void initNode() {
                 
-        this.nodeModel.gameObject.transform.localPosition = new Vector3(nodeModel.xPos, nodeModel.yPos, 0);
-        this.nodeModel.gameObject.transform.localScale = new Vector3(10, 10, 10);
-        this.nodeModel.gameObject.GetComponent<Renderer>().material.color = Color.red;
+        this.nodeView.gameObject.transform.localPosition = new Vector3(nodeView.xPos, nodeView.yPos, 0);
+        this.nodeView.gameObject.transform.localScale = new Vector3(10, 10, 10);
+        this.nodeView.gameObject.GetComponent<Renderer>().material.color = Color.red;
 
-        Rigidbody rb = this.nodeModel.gameObject.AddComponent<Rigidbody>();
+        Rigidbody rb = this.nodeView.gameObject.AddComponent<Rigidbody>();
 
     }
 
 
     public void moveNode(int x, int y, int z) {
 
-        Rigidbody rb = this.nodeModel.gameObject.GetComponent<Rigidbody>();
+        Rigidbody rb = this.nodeView.gameObject.GetComponent<Rigidbody>();
         rb.AddForce(x, y, z);
 
     }
